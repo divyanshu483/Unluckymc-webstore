@@ -1,0 +1,274 @@
+{% extends "layout.html" %}
+
+
+
+{% block content %}
+
+<style>
+
+    /* Added margin-bottom to push the footer away */
+
+    .custom-grid-wrapper {
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 20px;
+
+        justify-content: center;
+
+        width: 100%;
+
+        margin-top: 20px;
+
+        margin-bottom: 80px; /* This creates space above the footer */
+
+    }
+
+    
+
+    .category-card-link {
+
+        text-decoration: none !important;
+
+        flex: 1 1 calc(50% - 20px); 
+
+        min-width: 300px;
+
+        max-width: 580px;
+
+        display: block;
+
+    }
+
+
+
+    .category-box {
+
+        background-color: #142a3d;
+
+        border-radius: 8px;
+
+        padding: 25px;
+
+        box-sizing: border-box;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        border: 1px solid #233d54;
+
+        position: relative;
+
+        overflow: hidden;
+
+        transition: all 0.3s ease-in-out !important;
+
+        min-height: 140px;
+
+    }
+
+
+
+    .category-card-link:hover .category-box {
+
+        transform: translateY(-5px) !important;
+
+        background-color: #1a354d !important; 
+
+        border-color: #d11aff !important;
+
+        box-shadow: 0 10px 20px rgba(209, 26, 255, 0.2) !important;
+
+    }
+
+
+
+   .side-bar-accent {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Centers it vertically */
+    width: 6px !important;       /* Forces it to stay narrow */
+    height: 60px !important;      /* Forces a fixed height */
+    background-color: #d11aff;
+    border-radius: 0 4px 4px 0;
+    z-index: 5;                  /* Keeps it above the background */
+    display: block !important;    /* Ensures it doesn't flex */
+}
+
+</style>
+
+
+
+<div class="site-content" style="padding-bottom: 60px;">
+
+    <main class="store-products">
+
+        
+
+        {% if category.description != "" %}
+
+            <div class="category-description text-content" style="margin-bottom: 20px;">
+
+                {{ category.description|raw }}
+
+            </div>
+
+        {% endif %}
+
+
+
+        {# ... keep the rest of your manual box logic the same ... #}
+
+
+
+<div class="site-content">
+
+    <main class="store-products">
+
+        
+
+        {% if category.description != "" %}
+
+            <div class="category-description text-content" style="margin-bottom: 20px;">
+
+                {{ category.description|raw }}
+
+            </div>
+
+        {% endif %}
+
+
+
+        {# --- MANUAL BOX LOGIC --- #}
+
+        {# This checks if you are inside a main category that has no packages yet #}
+
+        {% if category.packages|length == 0 %}
+
+            <div class="custom-grid-wrapper">
+
+                
+
+                {# BOX 1: RANKS #}
+
+                <a href="/category/{{category.name}}-ranks" class="category-card-link">
+
+                    <div class="category-box">
+
+                        <div class="side-bar-accent"></div>
+
+                        <div style="text-align: left; padding-left: 15px;">
+
+                            <h2 style="color: #ffffff; font-weight: 900; margin: 0; font-family: sans-serif; font-size: 32px;">Ranks</h2>
+
+                            <p style="color: #a0aec0; margin: 10px 0 0; font-family: sans-serif; font-size: 16px; font-weight: 700;">
+
+                                Click to view <i class="fa fa-caret-right"></i>
+
+                            </p>
+
+                        </div>
+
+                        <div style="margin-left: 15px;">
+
+                            <img src="https://cdn.tebex.io/webstore/1600397/images/1600397-fbc1ff1dc26fcdb9e4d3d5e6791b5754b4b66786.png" style="max-width: 100px; height: auto;">
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+
+                {# BOX 2: COINS #}
+
+                <a href="/category/{{category.name}}-coins" class="category-card-link">
+
+                    <div class="category-box">
+
+                        <div class="side-bar-accent"></div>
+
+                        <div style="text-align: left; padding-left: 15px;">
+
+                            <h2 style="color: #ffffff; font-weight: 900; margin: 0; font-family: sans-serif; font-size: 32px;">Coins</h2>
+
+                            <p style="color: #a0aec0; margin: 10px 0 0; font-family: sans-serif; font-size: 16px; font-weight: 700;">
+
+                                Click to view <i class="fa fa-caret-right"></i>
+
+                            </p>
+
+                        </div>
+
+                        <div style="margin-left: 15px;">
+
+                            <img src="https://cdn.tebex.io/webstore/1600397/images/1600397-c4fc017f47a13b1dd7ab9dc37b3d9dde22dcf8eb.png" style="max-width: 90px; height: auto;">
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+                <a href="/category/{{category.name}}-tags" class="category-card-link">
+
+                    <div class="category-box">
+
+                        <div class="side-bar-accent"></div>
+
+                        <div style="text-align: left; padding-left: 15px;">
+
+                            <h2 style="color: #ffffff; font-weight: 900; margin: 0; font-family: sans-serif; font-size: 32px;">Tags</h2>
+
+                            <p style="color: #a0aec0; margin: 10px 0 0; font-family: sans-serif; font-size: 16px; font-weight: 700;">
+
+                                Click to view <i class="fa fa-caret-right"></i>
+
+                            </p>
+
+                        </div>
+
+                        <div style="margin-left: 15px;">
+
+                            <img src="https://cdn.tebex.io/webstore/1600397/images/1600397-c4fc017f47a13b1dd7ab9dc37b3d9dde22dcf8eb.png" style="max-width: 100px; height: auto;">
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+
+            </div>
+
+        {% else %}
+
+            {# SHOW ACTUAL PACKAGES (This runs when you click Ranks or Coins) #}
+
+            <div class="store-products-{{ category.displayType }}">
+
+                {% for package in category.packages %}
+
+                    {% include 'package-entry.twig' with { package, currency: basket.currency } %}
+
+                {% endfor %}
+
+            </div>
+
+        {% endif %}
+
+
+
+    </main>
+
+</div>
+
+{% endblock %}

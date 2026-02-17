@@ -1,0 +1,5 @@
+{% if price > totalPrice %}
+    <span class="package-discount-old" data-base-old="{{ price }}" style="text-decoration: line-through; color: #a0aec0; margin-right: 8px; font-size: 0.9em;">
+        {% if currency == 'USD' %}${{ price|money }}{% elseif currency == 'EUR' %}€{{ price|money }}{% else %}{{ price|money }} {{ currency }}{% endif %}
+    </span>
+{% endif %}
