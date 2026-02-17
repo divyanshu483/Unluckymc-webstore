@@ -1,7 +1,0 @@
-{% set finalPrice = (totalPrice > 0 and price > totalPrice) ? totalPrice : price %}
-
-<span class="package-price" data-base-price="{{ price }}" data-sale-price="{{ totalPrice }}">
-    <strong style="{{ price > totalPrice ? 'color: #2ecc71;' : '' }}">
-        {% if currency == 'USD' %}${{ finalPrice|money }}{% elseif currency == 'EUR' %}€{{ finalPrice|money }}{% else %}{{ finalPrice|money }} {{ currency }}{% endif %}
-    </strong>
-</span>

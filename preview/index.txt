@@ -1,0 +1,27 @@
+🎮 UNLUCKYMC WEBSTORE PREVIEW
+=============================
+
+✅ SERVER IS RUNNING!
+
+📍 Open in your browser:
+   http://localhost:8000
+
+🎯 What's included:
+   • Full homepage layout
+   • Interactive category cards
+   • Currency selector
+   • Server IP copy button
+   • Gift card checker
+   • Top customer display
+   • All animations & hover effects
+
+📱 Mobile testing:
+   Find your IP and open http://YOUR-IP:8000 on mobile
+
+⏹️  To stop the server:
+   Use Kiro's process manager or restart terminal
+
+📖 More info:
+   See QUICK-START.md for detailed instructions
+
+Enjoy! 🚀
