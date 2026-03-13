@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,28 +11,44 @@
 
 <style>
 
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 /* BODY */
 
 body{
 font-family:Poppins;
 background:#050b1a;
 color:white;
-margin:0;
+overflow-x:hidden;
 }
 
-/* NAVBAR */
+/* NAVBAR (SAME AS INDEX) */
 
 nav{
 display:flex;
 justify-content:space-between;
 padding:20px 10%;
-background:rgba(10,20,50,.7);
+background:rgba(10,20,50,.5);
+backdrop-filter:blur(10px);
+border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+nav h1{
+font-family:Orbitron;
+color:#00d9ff;
 }
 
 nav a{
 color:white;
 margin-left:20px;
 text-decoration:none;
+transition:.3s;
 }
 
 nav a:hover{
@@ -40,7 +57,7 @@ color:#00d9ff;
 
 /* TITLE */
 
-h1{
+h1.page-title{
 text-align:center;
 font-family:Orbitron;
 margin-top:40px;
@@ -85,6 +102,7 @@ box-shadow:0 0 20px #00d9ff;
 
 .item h3{
 font-family:Orbitron;
+margin-bottom:10px;
 }
 
 /* PERKS LIST */
@@ -102,7 +120,7 @@ line-height:1.6;
 .price{
 color:#00d9ff;
 font-size:20px;
-margin:10px 0;
+margin:15px 0;
 }
 
 /* BUY BUTTON */
@@ -113,9 +131,9 @@ padding:10px 25px;
 background:#00d9ff;
 color:#020617;
 border-radius:6px;
-text-decoration:none;
 font-weight:bold;
 cursor:pointer;
+transition:.3s;
 }
 
 .buy:hover{
@@ -155,7 +173,7 @@ margin-top:20px;
 position:absolute;
 top:10px;
 right:15px;
-font-size:28px;
+font-size:30px;
 cursor:pointer;
 color:white;
 }
@@ -165,16 +183,19 @@ color:white;
 
 <body>
 
+<!-- NAVBAR -->
+
 <nav>
-<h2>LuckySMP</h2>
+<h1>LuckySMP</h1>
 
 <div>
-<a href="index.html">Home</a>
-<a href="store.html">Store</a>
+<a href="/">Home</a>
+<a href="/store">Store</a>
+<a href="https://discord.gg/ueadhWTNVW" target="_blank">Discord</a>
 </div>
 </nav>
 
-<h1>LuckySMP Store</h1>
+<h1 class="page-title">LuckySMP Store</h1>
 
 <!-- RANKS -->
 
@@ -278,9 +299,9 @@ color:white;
 <div class="item">
 <h3>Lucky Key</h3>
 <ul class="perks">
-<li>Special Lucky Crate Rewards</li>
-<li>Random Items</li>
-<li>Money & Rare Loot</li>
+<li>Lucky Crate Rewards</li>
+<li>Random Rare Items</li>
+<li>Money & Loot</li>
 </ul>
 <div class="price">₹20</div>
 <div class="buy" onclick="openQR()">Buy</div>
@@ -289,7 +310,7 @@ color:white;
 <div class="item">
 <h3>Spawner Key</h3>
 <ul class="perks">
-<li>Chance to Win Mob Spawners</li>
+<li>Chance to Win Spawners</li>
 <li>Rare Survival Items</li>
 <li>Bonus Rewards</li>
 </ul>
@@ -318,7 +339,6 @@ color:white;
 <span class="close" onclick="closeQR()">&times;</span>
 
 <h2>Scan to Pay</h2>
-<h4>Make Ticket on Discord after payment is done</h4>
 
 <img src="qr.png" alt="Payment QR" class="qrimg">
 
