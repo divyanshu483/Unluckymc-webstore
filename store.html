@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +18,8 @@ color:white;
 margin:0;
 }
 
+/* NAVBAR */
+
 nav{
 display:flex;
 justify-content:space-between;
@@ -34,6 +37,8 @@ nav a:hover{
 color:#00d9ff;
 }
 
+/* TITLE */
+
 h1{
 text-align:center;
 font-family:Orbitron;
@@ -41,13 +46,26 @@ margin-top:40px;
 color:#00d9ff;
 }
 
+/* CATEGORY TITLE */
+
+.category-title{
+text-align:center;
+font-family:Orbitron;
+margin-top:60px;
+font-size:30px;
+}
+
+/* STORE GRID */
+
 .store{
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
 gap:40px;
-padding:60px 10%;
+padding:40px 10%;
 }
+
+/* ITEM CARD */
 
 .item{
 background:rgba(255,255,255,.05);
@@ -56,6 +74,12 @@ border-radius:12px;
 width:250px;
 text-align:center;
 border:1px solid rgba(255,255,255,.1);
+transition:.3s;
+}
+
+.item:hover{
+transform:scale(1.05);
+box-shadow:0 0 20px #00d9ff;
 }
 
 .item h3{
@@ -98,26 +122,59 @@ background:white;
 
 <h1>LuckySMP Store</h1>
 
+<!-- RANKS CATEGORY -->
+
+<h2 class="category-title">Ranks</h2>
+
 <div class="store">
 
 <div class="item">
 <h3>VIP Rank</h3>
-<p>Access to exclusive commands and perks.</p>
+<p>Basic donor perks and commands.</p>
 <div class="price">$5</div>
 <a class="buy" href="#">Buy</a>
 </div>
 
 <div class="item">
 <h3>MVP Rank</h3>
-<p>Special abilities and cosmetic rewards.</p>
+<p>Extra commands and special cosmetics.</p>
 <div class="price">$10</div>
 <a class="buy" href="#">Buy</a>
 </div>
 
 <div class="item">
-<h3>Crate Key</h3>
-<p>Unlock rare rewards from crates.</p>
-<div class="price">$2</div>
+<h3>LEGEND Rank</h3>
+<p>All perks with exclusive abilities.</p>
+<div class="price">$20</div>
+<a class="buy" href="#">Buy</a>
+</div>
+
+</div>
+
+<!-- CRATE KEYS CATEGORY -->
+
+<h2 class="category-title">Crate Keys</h2>
+
+<div class="store">
+
+<div class="item">
+<h3>Vote Crate Key</h3>
+<p>Use in vote crates for small rewards.</p>
+<div class="price">$1</div>
+<a class="buy" href="#">Buy</a>
+</div>
+
+<div class="item">
+<h3>Rare Crate Key</h3>
+<p>Chance to win rare items and money.</p>
+<div class="price">$3</div>
+<a class="buy" href="#">Buy</a>
+</div>
+
+<div class="item">
+<h3>Legendary Crate Key</h3>
+<p>Unlock powerful rewards.</p>
+<div class="price">$6</div>
 <a class="buy" href="#">Buy</a>
 </div>
 
@@ -125,3 +182,4 @@ background:white;
 
 </body>
 </html>
+```
