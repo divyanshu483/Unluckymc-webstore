@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +9,42 @@
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
+/* POPUP */
 
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+justify-content:center;
+align-items:center;
+z-index:1000;
+}
+
+.popup-content{
+background:#0b142c;
+padding:40px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 0 20px #00d9ff;
+}
+
+.qrimg{
+width:220px;
+margin-top:20px;
+}
+
+.close{
+position:absolute;
+top:20px;
+right:30px;
+font-size:30px;
+cursor:pointer;
+color:white;
+}
 body{
 font-family:Poppins;
 background:#050b1a;
@@ -130,23 +164,77 @@ background:white;
 
 <div class="item">
 <h3>VIP Rank</h3>
-<p>Basic donor perks and commands.</p>
-<div class="price">$5</div>
-<a class="buy" href="#">Buy</a>
+<p>3x Homes
+2 Concurrent Auctions
+/craft Command
+/recipe Command</p>
+<div class="price">₹20</div>
+<a class="buy" onclick="openQR()">Buy</a>
 </div>
 
 <div class="item">
 <h3>MVP Rank</h3>
-<p>Extra commands and special cosmetics.</p>
-<div class="price">$10</div>
-<a class="buy" href="#">Buy</a>
+<p>5x Homes
+4 Concurrent Auctions
+/craft Command
+/recipe Command
+/disposal Command
+/near Command
+/hat Command
+/feed Command</p>
+<div class="price">₹30</div>
+<a class="buy" onclick="openQR()">Buy</a>
 </div>
 
 <div class="item">
-<h3>LEGEND Rank</h3>
-<p>All perks with exclusive abilities.</p>
-<div class="price">$20</div>
-<a class="buy" href="#">Buy</a>
+<h3>ELITE Rank</h3>
+<p>6x Homes
+5 Concurrent Auctions
+/craft Command
+/recipe Command
+/disposal Command
+/near Command
+/feed Command
+/inusee Command
+/enderchest Command</p>
+<div class="price">₹40</div>
+<a class="buy" onclick="openQR()">Buy</a>
+</div>
+
+<div class="item">
+<h3>IMMORTAL Rank</h3>
+<p>7x Homes
+6 Concurrent Auctions
+/craft Command
+/recipe Command
+/disposal Command
+/near Command
+/hat Command
+/invsee Command
+/enderchest Command
+/ptime Command
+/pweather Command</p>
+<div class="price">₹50</div>
+<a class="buy" onclick="openQR()">Buy</a>
+</div>
+
+<div class="item">
+<h3>DEADLIEST Rank</h3>
+<p>10x Homes
+8 Concurrent Auctions
+/craft Command
+/recipe Command
+/disposal Command
+/near Command
+/hat Command
+/feed Command
+/inusee Command
+/enderchest Command
+/ptime Command
+/pweather Command
+/heal Command</p>
+<div class="price">₹60</div>
+<a class="buy" onclick="openQR()">Buy</a>
 </div>
 
 </div>
@@ -179,7 +267,28 @@ background:white;
 </div>
 
 </div>
+<div id="qrPopup" class="popup">
+<div class="popup-content">
 
+<span class="close" onclick="closeQR()">&times;</span>
+
+<h2>Scan to Pay</h2>
+
+<img src="qr.png" alt="Payment QR" class="qrimg">
+
+</div>
+</div>
+<script>
+
+function openQR(){
+document.getElementById("qrPopup").style.display="flex";
+}
+
+function closeQR(){
+document.getElementById("qrPopup").style.display="none";
+}
+
+</script>
 </body>
 </html>
 ```
